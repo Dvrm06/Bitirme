@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Ders Programı v7</title>
+
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+
+<div id="hataKutusu">Hata!</div>
+
+<div class="ana-ekran">
+  
+  <div class="sol-panel">
+    <h3>Dersler</h3>
+    <small style="color:#bbb; margin-bottom:20px;">Blok Dersler: B</small>
+    
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="edb">
+      <span>Edebiyat <span class="blok-ikon" title="Blok">B</span></span> <span id="count-edb">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="mat">
+      <span>Matematik <span class="blok-ikon" title="Blok">B</span></span> <span id="count-mat">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="fiz">
+      <span>Fizik <span class="blok-ikon" title="Blok">B</span></span> <span id="count-fiz">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="kim">
+      <span>Kimya <span class="blok-ikon" title="Blok">B</span></span> <span id="count-kim">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="biyo">
+      <span>Biyoloji <span class="blok-ikon" title="Blok">B</span></span> <span id="count-biyo">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="ing">
+      <span>İngilizce <span class="blok-ikon" title="Blok">B</span></span> <span id="count-ing">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="alm">
+      <span>Almanca <span class="blok-ikon" title="Blok">B</span></span> <span id="count-alm">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="beden" style="background-color: #8e44ad;">
+      <span>Beden E. <span class="blok-ikon" title="Blok">B</span></span> <span id="count-beden">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="tarih" style="background-color: #8e44ad;">
+      <span>Tarih</span> <span id="count-tarih">(0)</span>
+    </div>
+    <div class="ders-kutusu" draggable="true" ondragstart="tasimaBasladi(event)" id="resim" style="background-color: #8e44ad;">
+      <span>Resim</span> <span id="count-resim">(0)</span>
+    </div>
+
+    <input type="file" id="gizliDosyaInput" accept=".json" style="display: none;" onchange="dosyaSecildi(event)">
+
+    <div class="buton-grubu">
+        <button class="btn btn-kaydet" onclick="kaydet()">Kaydet</button>
+        <button class="btn btn-indir" onclick="kodDisaAktar()">İndir (.json)</button>
+        <button class="btn btn-yukle" onclick="dosyaYukleButonu()">Yükle (.json)</button>
+        <button class="btn btn-temizle" onclick="tabloyuTemizle()">Sıfırla</button>
+    </div>
+  </div>
+
+  <div class="sag-sahne">
+    <h3 style="color:#2c3e50;">Akıllı Ders Programı</h3>
+    <table id="programTablosu"></table>
+    <div class="bilgi-notu">
+        * Blok dersler koyulurken koyduğunuz saate ve sonraki saate birlikte koyulur. <br>
+        * Hafta içi cuma günleri 13.00-14.00 arası diğer günler 12.00-13.00 arası öğle tatilidir.<br>
+        * Beden Eğitimi sadece Cuma (Öğleden sonra).<br>
+        * Yükleme yaparken mevcut tablo silinir ve dosyadaki veri yazılır.
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

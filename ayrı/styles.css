@@ -1,0 +1,70 @@
+body, html { height: 100%; margin: 0; font-family: 'Segoe UI', sans-serif; overflow: hidden; }
+  .ana-ekran { display: flex; height: 100vh; }
+
+  /* SOL PANEL */
+  .sol-panel {
+    flex: 1; background-color: #2c3e50; padding: 10px;
+    border-right: 5px solid #1a252f; color: white;
+    display: flex; flex-direction: column; align-items: center; overflow-y: auto;
+  }
+
+  /* SAĞ PANEL */
+  .sag-sahne {
+    flex: 4; background-color: #ecf0f1;
+    display: flex; flex-direction: column; align-items: center; padding: 10px;
+  }
+
+  /* TABLO */
+  table { border-collapse: collapse; background-color: white; box-shadow: 0 0 15px rgba(0,0,0,0.2); margin-top: 10px; }
+  td {
+    width: 90px; height: 45px; border: 1px solid #bdc3c7;
+    text-align: center; vertical-align: middle; font-size: 13px; position: relative;
+  }
+  .baslik-hucre { background-color: #95a5a6; color: white; font-weight: bold; }
+
+  /* ÖĞLE ARASI STİLİ */
+  .ogle-arasi {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 11px;
+    user-select: none;
+  }
+
+  /* DERS KUTULARI */
+  .ders-kutusu {
+    width: 90%; padding: 10px 0; margin-bottom: 10px;
+    background-color: #e74c3c; color: white;
+    text-align: center; border-radius: 5px; cursor: grab; font-weight: bold;
+    user-select: none; display: flex; justify-content: space-between; padding: 10px; align-items: center;
+  }
+  
+  .stok-bitti { background-color: #555 !important; cursor: not-allowed; opacity: 0.6; }
+
+  /* Yerleşmiş Ders */
+  .yerlesmis-ders {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    background-color: #3498db; color: white; cursor: pointer; font-size: 12px;
+  }
+  .yerlesmis-ders:hover { background-color: #c0392b; }
+
+  /* Butonlar */
+  .buton-grubu { margin-top: 20px; width: 100%; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;}
+  .btn { padding: 10px 15px; border: none; cursor: pointer; font-weight: bold; border-radius: 5px; font-size: 12px;}
+  .btn-kaydet { background-color: #27ae60; color: white; }
+  .btn-temizle { background-color: #e67e22; color: white; }
+  .btn-indir { background-color: #8e44ad; color: white; }
+  .btn-yukle { background-color: #2980b9; color: white; } /* Mavi Buton */
+
+  /* Uyarı Kutusu */
+  #hataKutusu {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background-color: #c0392b; color: white; padding: 15px 30px;
+    border-radius: 5px; font-weight: bold; display: none; z-index: 1000;
+  }
+
+  .kapali-alan { background-color: #bdc3c7; color: #7f8c8d; font-weight: bold; letter-spacing: 1px; font-size: 11px; user-select: none; }
+  
+  .bilgi-notu { width: 100%; max-width: 800px; text-align: left; margin-top: 8px; font-size: 13px; color: #e74c3c; font-weight: 600; }
+  .blok-ikon { font-size: 10px; background: white; color: black; border-radius: 50%; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; margin-left: 5px;}
